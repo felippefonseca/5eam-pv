@@ -192,28 +192,16 @@
         });
       }
 
-      /* --- narrativa da virada: uma linha por vez --- */
-      var linhas = gsap.utils.toArray('.narrativa .linha');
+      /* --- narrativa da virada: uma linha por vez, sem pin para evitar duplicação visual --- */
+      var linhas = gsap.utils.toArray('#virada .narrativa .linha');
       if (linhas.length) {
-        mm.add('(min-width: 900px)', function(){
-          var tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: '.virada', start: 'top top', end: '+=' + (linhas.length * 45) + '%',
-              pin: true, scrub: 0.6, anticipatePin: 1, invalidateOnRefresh: true, refreshPriority: 1
-            }
-          });
-          linhas.forEach(function(l, i){
-            tl.to(l, { autoAlpha: 1, duration: 0.5 }, i * 0.7)
-              .to(l, { autoAlpha: 0.18, duration: 0.5 }, i * 0.7 + 0.85);
-          });
-          tl.to(linhas[linhas.length - 1], { autoAlpha: 1, duration: 0.3 });
-          return function(){ gsap.set(linhas, { clearProps: 'opacity,visibility' }); };
-        });
-        mm.add('(max-width: 899px)', function(){
-          linhas.forEach(function(l){
-            gsap.to(l, { autoAlpha: 1, duration: 0.6,
-              scrollTrigger: { trigger: l, start: 'top 80%', once: true } });
-          });
+        gsap.set(linhas, { autoAlpha: 0.22, y: 12 });
+        ScrollTrigger.batch(linhas, {
+          start: 'top 84%',
+          once: true,
+          onEnter: function(lote){
+            gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.12, overwrite: true });
+          }
         });
       }
 
