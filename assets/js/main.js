@@ -192,17 +192,37 @@
         });
       }
 
-      /* --- narrativa da virada: uma linha por vez, sem pin para evitar duplicação visual --- */
+      /* --- narrativa da virada: efeito GSAP mantido sem pin duplicável --- */
+      var virada = document.getElementById('virada');
       var linhas = gsap.utils.toArray('#virada .narrativa .linha');
-      if (linhas.length) {
-        gsap.set(linhas, { autoAlpha: 0.22, y: 12 });
-        ScrollTrigger.batch(linhas, {
-          start: 'top 84%',
-          once: true,
-          onEnter: function(lote){
-            gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.12, overwrite: true });
-          }
-        });
+      if (virada && linhas.length) {
+        if (window.matchMedia('(min-width: 900px)').matches) {
+          gsap.set(linhas, { autoAlpha: 0.18, y: 0 });
+          var tlVirada = gsap.timeline({
+            scrollTrigger: {
+              trigger: virada,
+              start: 'top top',
+              end: 'bottom bottom',
+              scrub: 0.6,
+              invalidateOnRefresh: true
+            }
+          });
+          linhas.forEach(function(l, i){
+            tlVirada.to(l, { autoAlpha: 1, duration: 0.45 }, i * 0.8);
+            if (i < linhas.length - 1) {
+              tlVirada.to(l, { autoAlpha: 0.18, duration: 0.45 }, i * 0.8 + 0.6);
+            }
+          });
+        } else {
+          gsap.set(linhas, { autoAlpha: 0.22, y: 12 });
+          ScrollTrigger.batch(linhas, {
+            start: 'top 84%',
+            once: true,
+            onEnter: function(lote){
+              gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.12, overwrite: true });
+            }
+          });
+        }
       }
 
       /* --- linha do tempo: controlada pelo script base para funcionar mesmo sem CDN --- */
@@ -585,12 +605,32 @@
   });
 
   /* --- envio: grava na planilha e leva para o checkout --- */
-  // PREENCHER: cole aqui a URL do app da web publicado pelo Google Apps Script.
-  var PLANILHA = '';
+  // Encaminha o lead para a rota da Vercel, que repassa para a planilha quando configurada.
+  var PLANILHA = '/api/leads';
   var CHECKOUT = 'https://pay.hotmart.com/M102252055U';
+  var CAMPOS_RASTREIO = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','utm_id','gclid','fbclid'];
 
   function parametro(nome){
     return new URLSearchParams(window.location.search).get(nome) || '';
+  }
+
+  function dadosDeRastreio(){
+    var rastreio = {};
+    CAMPOS_RASTREIO.forEach(function(campo){ rastreio[campo] = parametro(campo); });
+    return rastreio;
+  }
+
+  function montaCheckout(dados){
+    var params = new URLSearchParams({
+      name: dados.nome,
+      email: dados.email,
+      phonenumber: dados.whatsapp_e164,
+      sck: dados.utm_source ? 'site-5eam-' + dados.utm_source : 'site-5eam'
+    });
+    CAMPOS_RASTREIO.forEach(function(campo){
+      if (dados[campo]) params.set(campo, dados[campo]);
+    });
+    return CHECKOUT + '?' + params.toString();
   }
 
   function gravaNaPlanilha(dados){
@@ -616,6 +656,7 @@
     }
 
     var digitos = zap.value.replace(/\D/g, '');
+    var rastreio = dadosDeRastreio();
     var dados = {
       data: new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }),
       nome: nome.value.trim(),
@@ -628,9 +669,19 @@
       funcionarios: elemento('f-func').value,
       desafio: elemento('f-desafio').value,
       faturamento: elemento('f-fat').value,
-      origem: parametro('utm_source'),
-      campanha: parametro('utm_campaign'),
-      conteudo: parametro('utm_content'),
+      origem: rastreio.utm_source,
+      midia: rastreio.utm_medium,
+      campanha: rastreio.utm_campaign,
+      conteudo: rastreio.utm_content,
+      termo: rastreio.utm_term,
+      utm_source: rastreio.utm_source,
+      utm_medium: rastreio.utm_medium,
+      utm_campaign: rastreio.utm_campaign,
+      utm_content: rastreio.utm_content,
+      utm_term: rastreio.utm_term,
+      utm_id: rastreio.utm_id,
+      gclid: rastreio.gclid,
+      fbclid: rastreio.fbclid,
       pagina: window.location.href,
       evento: '5EAM'
     };
@@ -645,10 +696,7 @@
     }
 
     // checkout já preenchido com os dados da pessoa
-    var url = CHECKOUT + '?name=' + encodeURIComponent(dados.nome)
-            + '&email=' + encodeURIComponent(dados.email)
-            + '&phonenumber=' + encodeURIComponent(dados.whatsapp_e164)
-            + '&sck=' + encodeURIComponent(dados.origem ? 'site-5eam-' + dados.origem : 'site-5eam');
+    var url = montaCheckout(dados);
 
     var msg = 'Olá! Acabei de me inscrever no 5º EAM (R$ 397) e quero tirar uma dúvida.'
       + '\nNome: ' + dados.nome + '\nCidade: ' + dados.cidade + '/' + dados.uf;
