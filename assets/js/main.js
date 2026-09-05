@@ -258,12 +258,17 @@
   /* ---------- progresso de leitura + topbar compacta ---------- */
   var barra = document.getElementById('progresso');
   var topo = document.querySelector('.topbar');
+  var zapFlutuante = document.querySelector('.zap');
   var tick = false;
   function aoRolar(){
     var alt = document.documentElement.scrollHeight - window.innerHeight;
     var y = window.scrollY || window.pageYOffset;
     barra.style.width = (alt > 0 ? (y / alt) * 100 : 0) + '%';
     topo.classList.toggle('compacta', y > 80);
+    if (zapFlutuante) {
+      var limiteZap = Math.max(360, Math.min(620, window.innerHeight * 0.65));
+      zapFlutuante.classList.toggle('is-visible', y > limiteZap);
+    }
     tick = false;
   }
   window.addEventListener('scroll', function(){
