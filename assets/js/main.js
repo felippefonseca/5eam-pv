@@ -585,23 +585,9 @@
     return marca('f-email','');
   }
 
-  /* --- cidade e UF --- */
-  var cidade = elemento('f-cidade');
-  cidade.addEventListener('input', function(e){
-    e.target.value = e.target.value.replace(/[0-9!@#$%^&*_=+\[\]{}<>\/\\|]/g,'');
-    if (campoDe('f-cidade').classList.contains('campo-erro')) validaCidade();
-  });
-  cidade.addEventListener('blur', function(){ cidade.value = cidade.value.trim(); validaCidade(); });
-  function validaCidade(){
-    var v = cidade.value.trim();
-    if (v === '') return marca('f-cidade','Informe sua cidade.');
-    if (v.length < 3) return marca('f-cidade','Cidade muito curta.');
-    return marca('f-cidade','');
-  }
-
   /* --- selects --- */
-  var selects = ['f-uf','f-perfil','f-func','f-desafio'];
-  var rotulos = { 'f-uf':'Selecione o estado.', 'f-perfil':'Selecione seu papel na oficina.',
+  var selects = ['f-perfil','f-func','f-desafio'];
+  var rotulos = { 'f-perfil':'Selecione seu papel na oficina.',
                   'f-func':'Selecione o número de funcionários.', 'f-desafio':'Selecione seu principal desafio.' };
   selects.forEach(function(id){
     var el = elemento(id);
@@ -652,7 +638,7 @@
   }
 
   document.getElementById('btnEnviar').addEventListener('click', function(){
-    var ok = [validaNome(), validaZap(), validaEmail(), validaCidade()].every(Boolean);
+    var ok = [validaNome(), validaZap(), validaEmail()].every(Boolean);
     selects.forEach(function(id){ if (!marca(id, elemento(id).value ? '' : rotulos[id])) ok = false; });
     if (!ok) {
       var primeiro = document.querySelector('.campo-erro input, .campo-erro select');
@@ -668,8 +654,6 @@
       whatsapp: zap.value,
       whatsapp_e164: '55' + digitos,
       email: email.value.trim(),
-      cidade: cidade.value.trim(),
-      uf: elemento('f-uf').value,
       perfil: elemento('f-perfil').value,
       funcionarios: elemento('f-func').value,
       desafio: elemento('f-desafio').value,
@@ -694,7 +678,7 @@
     gravaNaPlanilha(dados);
 
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: 'lead_5eam', perfil: dados.perfil, funcionarios: dados.funcionarios, desafio: dados.desafio, uf: dados.uf });
+    window.dataLayer.push({ event: 'lead_5eam', perfil: dados.perfil, funcionarios: dados.funcionarios, desafio: dados.desafio });
     if (typeof window.fbq === 'function') {
       window.fbq('track', 'Lead', { content_name: '5EAM', value: 397, currency: 'BRL' });
       window.fbq('track', 'InitiateCheckout', { content_name: '5EAM', value: 397, currency: 'BRL' });
@@ -704,7 +688,7 @@
     var url = montaCheckout(dados);
 
     var msg = 'Olá! Acabei de me inscrever no 5º EAM (R$ 397) e quero tirar uma dúvida.'
-      + '\nNome: ' + dados.nome + '\nCidade: ' + dados.cidade + '/' + dados.uf;
+      + '\nNome: ' + dados.nome;
     document.getElementById('linkZap').href = 'https://wa.me/' + ZAP + '?text=' + encodeURIComponent(msg);
     document.getElementById('linkCheckout').href = url;
     document.getElementById('camposForm').style.display = 'none';
