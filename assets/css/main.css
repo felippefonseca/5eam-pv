@@ -472,7 +472,6 @@ footer{border-top:1px solid var(--linha);padding:56px 0 120px;background:var(--s
 .campo input:focus,.campo select:focus{border-color:var(--azul-eletrico);outline:none;box-shadow:0 0 0 3px rgba(0,102,255,.18)}
 .campo-erro input,.campo-erro select{border-color:#FF4D5E}
 .campo .erro{display:none;color:#FF7A86;font-size:13px;margin-top:6px;line-height:1.4}
-.duo-cidade{grid-template-columns:1fr 96px}
 .campo-ok input,.campo-ok select{border-color:rgba(0,102,255,.55)}
 .sugestao{display:none;margin-top:7px;font-size:13px;color:var(--azul-ciano)}
 .sugestao button{background:none;border:0;color:var(--ciano-neon);text-decoration:underline;cursor:pointer;font-size:13px;padding:0;font-family:inherit}
@@ -850,7 +849,6 @@ html.timeline-ready .edicao.is-active .edicao-fotos .foto:nth-child(3){transitio
   .topbar .btn{display:none}
   .calc-out{text-align:left}
   .duo{grid-template-columns:1fr}
-  .duo-cidade{grid-template-columns:1fr 88px}
   footer{padding-bottom:130px}
 }
 @media (prefers-reduced-motion:reduce){
