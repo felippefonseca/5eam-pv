@@ -440,7 +440,17 @@
     document.body.style.overflow = '';
     if (ultimoFoco) ultimoFoco.focus();
   }
+  function irParaPreco(){
+    var alvo = document.getElementById('vaga');
+    if (!alvo) return;
+    alvo.scrollIntoView({ behavior: reduz ? 'auto' : 'smooth', block: 'start' });
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, '', '#vaga');
+    }
+  }
   document.addEventListener('click', function(e){
+    var irPreco = e.target.closest('[data-ir-preco]');
+    if (irPreco) { e.preventDefault(); fechar(); irParaPreco(); return; }
     var abrirForm = e.target.closest('[data-abrir-form]');
     if (abrirForm) { fechar(); abrir('modalForm'); return; }
     if (e.target.closest('[data-fechar]')) { fechar(); return; }
@@ -598,7 +608,7 @@
   /* --- envio: grava na planilha e leva para o checkout --- */
   // Encaminha o lead para a rota da Vercel, que repassa para a planilha quando configurada.
   var PLANILHA = '/api/leads';
-  var CHECKOUT = 'https://pay.hotmart.com/M102252055U';
+  var CHECKOUT = 'https://pay.hotmart.com/M102252055U?off=3fuijp11';
   var CAMPOS_RASTREIO = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','utm_id','gclid','fbclid'];
 
   function parametro(nome){
@@ -612,16 +622,16 @@
   }
 
   function montaCheckout(dados){
-    var params = new URLSearchParams({
-      name: dados.nome,
-      email: dados.email,
-      phonenumber: dados.whatsapp_e164,
-      sck: dados.utm_source ? 'site-5eam-' + dados.utm_source : 'site-5eam'
-    });
+    var url = new URL(CHECKOUT);
+    var params = url.searchParams;
+    params.set('name', dados.nome);
+    params.set('email', dados.email);
+    params.set('phonenumber', dados.whatsapp_e164);
+    params.set('sck', dados.utm_source ? 'site-5eam-' + dados.utm_source : 'site-5eam');
     CAMPOS_RASTREIO.forEach(function(campo){
       if (dados[campo]) params.set(campo, dados[campo]);
     });
-    return CHECKOUT + '?' + params.toString();
+    return url.toString();
   }
 
   function gravaNaPlanilha(dados){
