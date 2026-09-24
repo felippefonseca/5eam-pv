@@ -372,26 +372,38 @@ input[type=range]{width:100%;accent-color:var(--azul-eletrico);height:6px}
 .logo-tile:hover{transform:translateY(-3px);box-shadow:0 14px 30px -14px rgba(0,102,255,.7)}
 .logo-tile img{max-width:100%;max-height:62px;width:auto;height:auto;object-fit:contain}
 
-/* ---- patrocinadora prata ---- */
-.sampel-section{
+/* ---- patrocinadores confirmados ---- */
+.current-sponsors-section{
   background:linear-gradient(180deg,rgba(242,244,247,.045),rgba(0,102,255,.045) 56%,transparent);
   border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);
 }
-.sampel-grid{
-  display:grid;grid-template-columns:minmax(220px,360px) minmax(0,1fr);gap:clamp(28px,5vw,72px);
-  align-items:center;
+.current-sponsors-head{max-width:68ch;margin-bottom:34px}
+.current-sponsors-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:stretch}
+.sponsor-card{
+  display:grid;grid-template-columns:minmax(160px,260px) minmax(0,1fr);gap:clamp(18px,3vw,34px);align-items:center;
+  padding:clamp(22px,3vw,34px);border:1px solid rgba(184,189,198,.2);border-radius:18px;
+  background:linear-gradient(145deg,rgba(18,22,31,.96),rgba(11,14,20,.92));
+  box-shadow:0 28px 68px -44px rgba(0,0,0,.95),0 0 0 1px rgba(255,255,255,.04) inset;
 }
-.sampel-logo{
-  min-height:280px;display:grid;place-items:center;padding:clamp(26px,4vw,42px);
-  border:1px solid rgba(184,189,198,.2);border-radius:16px;
-  background:linear-gradient(145deg,rgba(242,244,247,.96),#fff);
-  box-shadow:0 28px 68px -38px rgba(0,0,0,.95),0 0 0 1px rgba(255,255,255,.06) inset;
+.sponsor-card.master{
+  grid-column:1/-1;grid-template-columns:minmax(260px,420px) minmax(0,1fr);
+  border-color:rgba(211,16,28,.5);
+  background:linear-gradient(145deg,rgba(211,16,28,.16),rgba(18,22,31,.96) 42%,rgba(11,14,20,.94));
 }
-.sampel-logo img{width:min(190px,68%);height:auto;object-fit:contain}
-.sampel-copy{max-width:690px}
-.sampel-copy p:not(.lead){max-width:62ch;color:var(--aco);font-weight:500;font-size:16px;line-height:1.65}
-.sampel-pontos{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.sampel-pontos span{
+.sponsor-card.bronze,.sponsor-card.institutional{grid-template-columns:1fr;gap:18px}
+.sponsor-logo-box{
+  min-height:154px;display:grid;place-items:center;padding:clamp(22px,3vw,34px);
+  border:1px solid rgba(184,189,198,.2);border-radius:14px;background:#fff;
+}
+.sponsor-card.master .sponsor-logo-box{min-height:240px;padding:clamp(22px,3vw,34px)}
+.sponsor-logo-box img{max-width:100%;max-height:120px;width:auto;height:auto;object-fit:contain}
+.sponsor-card.master .sponsor-logo-box img{max-height:170px}
+.sponsor-card.institutional .sponsor-logo-box img{max-height:98px}
+.sponsor-copy{max-width:690px}
+.sponsor-copy p:not(.lead){max-width:62ch;color:var(--aco);font-weight:500;font-size:16px;line-height:1.65}
+.sponsor-card.bronze .sponsor-copy p,.sponsor-card.institutional .sponsor-copy p{font-size:15px;line-height:1.6}
+.sponsor-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.sponsor-tags span{
   border:1px solid rgba(184,189,198,.18);border-radius:999px;padding:8px 12px;
   background:rgba(242,244,247,.04);color:var(--branco-gelo);font-size:13px;font-weight:700;
 }
@@ -821,10 +833,11 @@ html.timeline-ready .edicao.is-active .edicao-fotos .foto:nth-child(3){transitio
   .sergio-nums strong{font-size:19px}
   :root{--sp:clamp(52px,11vw,72px)}
   .rv{transform:translateY(16px);transition-duration:.5s}
-  .sampel-grid{grid-template-columns:1fr;gap:22px}
-  .sampel-logo{min-height:190px;padding:24px}
-  .sampel-logo img{width:min(180px,70%)}
-  .sampel-pontos{gap:8px}
+  .current-sponsors-grid{grid-template-columns:1fr}
+  .sponsor-card,.sponsor-card.bronze,.sponsor-card.institutional{grid-template-columns:1fr;gap:18px}
+  .sponsor-logo-box,.sponsor-card.master .sponsor-logo-box{min-height:160px;padding:24px}
+  .sponsor-logo-box img,.sponsor-card.master .sponsor-logo-box img{max-height:104px}
+  .sponsor-tags{gap:8px}
 
   .kicker{font-size:11.5px;letter-spacing:.1em;padding:7px 14px}
   .lote-tag{font-size:12.5px}
