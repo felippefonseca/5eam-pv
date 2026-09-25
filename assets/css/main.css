@@ -833,11 +833,20 @@ html.timeline-ready .edicao.is-active .edicao-fotos .foto:nth-child(3){transitio
   .sergio-nums strong{font-size:19px}
   :root{--sp:clamp(52px,11vw,72px)}
   .rv{transform:translateY(16px);transition-duration:.5s}
-  .current-sponsors-grid{grid-template-columns:1fr}
-  .sponsor-card,.sponsor-card.bronze,.sponsor-card.institutional{grid-template-columns:1fr;gap:18px}
-  .sponsor-logo-box,.sponsor-card.master .sponsor-logo-box{min-height:160px;padding:24px}
-  .sponsor-logo-box img,.sponsor-card.master .sponsor-logo-box img{max-height:104px}
-  .sponsor-tags{gap:8px}
+  .current-sponsors-head{margin-bottom:24px}
+  .current-sponsors-grid{grid-template-columns:1fr;gap:14px}
+  .sponsor-card,.sponsor-card.master,.sponsor-card.bronze,.sponsor-card.institutional{
+    grid-template-columns:1fr;gap:16px;padding:18px;border-radius:14px;
+  }
+  .sponsor-copy{max-width:none;min-width:0}
+  .sponsor-card h3{font-size:clamp(18px,5.4vw,21px);line-height:1.14;letter-spacing:0;text-wrap:balance}
+  .sponsor-card .lead{font-size:16px;line-height:1.5}
+  .sponsor-copy p:not(.lead){font-size:15px;line-height:1.55}
+  .sponsor-logo-box,.sponsor-card.master .sponsor-logo-box{min-height:132px;padding:20px}
+  .sponsor-logo-box img,.sponsor-card.master .sponsor-logo-box img{max-height:88px}
+  .sponsor-card.institutional .sponsor-logo-box img{max-height:72px}
+  .sponsor-tags{gap:8px;margin-top:18px}
+  .sponsor-tags span{font-size:12px;line-height:1.2;padding:7px 10px}
 
   .kicker{font-size:11.5px;letter-spacing:.1em;padding:7px 14px}
   .lote-tag{font-size:12.5px}
