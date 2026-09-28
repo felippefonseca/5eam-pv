@@ -3,701 +3,170 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>5º EAM · Imersão para donos de oficina</title>
-<meta name="description" content="5º EAM: dois dias presenciais em Jundiaí para donos de oficina que querem liderar melhor, organizar a gestão e crescer com direção.">
-<meta name="theme-color" content="#080b10">
-<link rel="icon" href="assets/img/brand/favicon.png">
-<link rel="preload" href="assets/img/hero/plateia-hero.webp" as="image" fetchpriority="high">
-<link rel="preload" href="assets/img/brand/logo-5eam.webp" as="image" fetchpriority="high">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Saira:wght@700;800;900&display=swap" rel="stylesheet">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="5º EAM">
-<meta property="og:title" content="5º EAM · Imersão para donos de oficina">
-<meta property="og:description" content="10 e 11 de outubro de 2026 · Hotel Serra Jundiaí · R$ 397 · fale direto no WhatsApp para garantir sua vaga.">
-<meta property="og:image" content="https://5eam-pv.vercel.app/assets/img/hero/plateia-hero.webp">
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '311413340280663');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=311413340280663&ev=PageView&noscript=1" alt=""></noscript>
-<!-- End Meta Pixel Code -->
+<title>5º EAM · Página direta | Encontro Anual de Mecânicos</title>
+<meta name="description" content="Versão direta da página do 5º EAM: dois dias de imersão presencial para donos de oficina. 10 e 11 de outubro de 2026, Hotel Serra Jundiaí. Lote atual R$ 397.">
+<link rel="canonical" href="https://5eam-pv.vercel.app/v2">
+<meta name="theme-color" content="#0B0E14">
 <style>
-:root{
-  --bg:#080b10;
-  --panel:#111722;
-  --panel-2:#151d2b;
-  --line:rgba(255,255,255,.12);
-  --text:#f4f7fb;
-  --muted:#b8c0cc;
-  --soft:#dce3ec;
-  --blue:#0066ff;
-  --cyan:#00c8ff;
-  --green:#19d66b;
-  --danger:#ff3d59;
-  --radius:14px;
-  --shadow:0 28px 70px rgba(0,0,0,.38);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:Raleway,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  line-height:1.55;
-  overflow-x:hidden;
-}
-body:before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  background:
-    linear-gradient(180deg,rgba(0,102,255,.12),transparent 26rem),
-    radial-gradient(circle at 50% -10%,rgba(0,200,255,.14),transparent 34rem);
-  opacity:.9;
-}
-img{max-width:100%;display:block}
-a{color:inherit}
-.wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto}
-.topbar{
-  position:sticky;
-  top:0;
-  z-index:20;
-  background:rgba(8,11,16,.78);
-  border-bottom:1px solid var(--line);
-  backdrop-filter:blur(18px);
-}
-.topbar-in{
-  min-height:72px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-}
-.logo{width:86px;height:auto}
-.topbar-meta{
-  display:flex;
-  gap:10px;
-  align-items:center;
-  color:var(--muted);
-  font-family:Saira,sans-serif;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-.dot{width:5px;height:5px;border-radius:999px;background:var(--cyan);display:inline-block}
-.btn{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  gap:10px;
-  min-height:52px;
-  padding:0 22px;
-  border:0;
-  border-radius:9px;
-  background:linear-gradient(135deg,var(--blue),#2432ff);
-  color:#fff;
-  font-family:Saira,sans-serif;
-  font-size:14px;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  text-decoration:none;
-  cursor:pointer;
-  box-shadow:0 18px 42px rgba(0,102,255,.32);
-  transition:transform .18s ease,box-shadow .18s ease,filter .18s ease;
-}
-.btn:hover{transform:translateY(-2px);box-shadow:0 22px 48px rgba(0,102,255,.42);filter:saturate(1.12)}
-.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.24);box-shadow:none}
-.btn.whatsapp{background:linear-gradient(135deg,#16bf61,#0ba84f);box-shadow:0 18px 42px rgba(25,214,107,.28)}
-.btn small{display:block;font-family:Raleway,sans-serif;font-size:11px;font-weight:700;letter-spacing:0;text-transform:none;opacity:.86}
-.hero{
-  min-height:calc(100svh - 72px);
-  position:relative;
-  display:grid;
-  align-items:center;
-  padding:70px 0;
-  isolation:isolate;
-}
-.hero:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:-2;
-  background:#080b10;
-}
-.hero-media{
-  position:absolute;
-  inset:0;
-  z-index:-1;
-  opacity:.34;
-}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center}
-.hero-media:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(90deg,#080b10 0%,rgba(8,11,16,.86) 36%,rgba(8,11,16,.58) 100%),linear-gradient(180deg,rgba(8,11,16,.22),#080b10 96%);
-}
-.hero-grid{
-  display:grid;
-  grid-template-columns:minmax(0,1.1fr) 360px;
-  gap:48px;
-  align-items:end;
-}
-.eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-  color:var(--cyan);
-  font-family:Saira,sans-serif;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-}
-.eyebrow:before{content:"";width:24px;height:2px;background:var(--cyan)}
-h1,h2,h3{
-  margin:0;
-  font-family:Saira,sans-serif;
-  line-height:.98;
-  letter-spacing:0;
-  text-transform:uppercase;
-}
-h1{
-  max-width:850px;
-  margin-top:18px;
-  font-size:clamp(44px,8vw,96px);
-}
-h1 span{color:var(--cyan)}
-h2{font-size:clamp(32px,5vw,58px)}
-h3{font-size:24px}
-.lead{
-  max-width:680px;
-  margin:24px 0 0;
-  color:var(--soft);
-  font-size:clamp(18px,2vw,23px);
-}
-.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
-.hero-proof{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1px;
-  overflow:hidden;
-  margin-top:42px;
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  background:var(--line);
-  max-width:760px;
-}
-.proof-item{
-  min-height:100px;
-  padding:18px;
-  background:rgba(17,23,34,.84);
-}
-.proof-item b{
-  display:block;
-  font-family:Saira,sans-serif;
-  font-size:20px;
-  line-height:1.05;
-  text-transform:uppercase;
-}
-.proof-item span{
-  display:block;
-  margin-top:7px;
-  color:var(--muted);
-  font-size:13px;
-}
-.ticket-card{
-  border:1px solid rgba(0,200,255,.22);
-  border-radius:var(--radius);
-  background:linear-gradient(180deg,rgba(17,23,34,.96),rgba(13,18,27,.92));
-  box-shadow:var(--shadow);
-  padding:24px;
-}
-.ticket-card img{width:116px;margin-bottom:24px}
-.ticket-label{
-  color:var(--cyan);
-  font-family:Saira,sans-serif;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-}
-.price{
-  margin:8px 0 4px;
-  font-family:Saira,sans-serif;
-  font-size:58px;
-  font-weight:900;
-  line-height:.95;
-}
-.price sup{font-size:22px;margin-right:4px}
-.ticket-card p{margin:12px 0;color:var(--muted)}
-.ticket-list{
-  display:grid;
-  gap:10px;
-  margin:22px 0;
-  padding:0;
-  list-style:none;
-  color:var(--soft);
-  font-size:14px;
-}
-.ticket-list li{display:flex;gap:10px}
-.ticket-list li:before{content:"";width:8px;height:8px;margin-top:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(25,214,107,.12);flex:0 0 auto}
-section{position:relative;padding:88px 0;border-top:1px solid rgba(255,255,255,.06)}
-.split{
-  display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(320px,440px);
-  gap:46px;
-  align-items:center;
-}
-.copy p{color:var(--soft);font-size:18px}
-.bullets{display:grid;gap:14px;margin-top:28px}
-.bullet{
-  display:grid;
-  grid-template-columns:40px 1fr;
-  gap:14px;
-  align-items:start;
-  padding:18px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:rgba(255,255,255,.035);
-}
-.bullet i{
-  display:grid;
-  place-items:center;
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  background:rgba(0,102,255,.18);
-  color:var(--cyan);
-  font-family:Saira,sans-serif;
-  font-style:normal;
-  font-weight:900;
-}
-.bullet b{display:block;font-family:Saira,sans-serif;text-transform:uppercase}
-.bullet span{display:block;margin-top:4px;color:var(--muted)}
-.photo-stack{
-  display:grid;
-  gap:16px;
-}
-.photo-card{
-  overflow:hidden;
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  background:var(--panel);
-  box-shadow:var(--shadow);
-}
-.photo-card img{width:100%;height:360px;object-fit:cover}
-.photo-card figcaption{
-  padding:14px 16px;
-  color:var(--muted);
-  font-size:13px;
-}
-.strip{
-  background:linear-gradient(180deg,rgba(0,102,255,.12),rgba(255,255,255,.03));
-}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:30px}
-.section-head p{max-width:520px;margin:0;color:var(--muted);font-size:17px}
-.grid-3{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-.grid-4{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
-}
-.mini-card{
-  min-height:190px;
-  padding:22px;
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  background:var(--panel);
-}
-.mini-card b{
-  display:block;
-  font-family:Saira,sans-serif;
-  font-size:18px;
-  text-transform:uppercase;
-}
-.mini-card span{display:block;margin-top:10px;color:var(--muted)}
-.speaker{
-  overflow:hidden;
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  background:var(--panel);
-}
-.speaker img{width:100%;height:210px;object-fit:cover;object-position:center top}
-.speaker .in{padding:16px}
-.speaker b{display:block;font-family:Saira,sans-serif;font-size:17px;text-transform:uppercase}
-.speaker span{display:block;margin-top:6px;color:var(--muted);font-size:13px}
-.offer{
-  padding:0;
-}
-.offer-box{
-  display:grid;
-  grid-template-columns:minmax(0,1fr) 360px;
-  gap:1px;
-  overflow:hidden;
-  border:1px solid rgba(0,200,255,.22);
-  border-radius:var(--radius);
-  background:var(--line);
-  box-shadow:var(--shadow);
-}
-.offer-copy,.offer-price{
-  padding:34px;
-  background:linear-gradient(180deg,rgba(17,23,34,.98),rgba(13,18,27,.96));
-}
-.offer-copy ul{display:grid;gap:12px;margin:24px 0 0;padding:0;list-style:none;color:var(--soft)}
-.offer-copy li{display:flex;gap:10px}
-.offer-copy li:before{content:"✓";color:var(--green);font-weight:900}
-.offer-price{
-  display:grid;
-  align-content:center;
-}
-.logos{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:26px;
-}
-.logo-tile{
-  display:grid;
-  place-items:center;
-  width:150px;
-  height:78px;
-  padding:14px;
-  border-radius:12px;
-  background:#fff;
-}
-.logo-tile img{max-height:50px;object-fit:contain}
-.faq{display:grid;gap:10px}
-details{
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:rgba(255,255,255,.035);
-}
-summary{
-  cursor:pointer;
-  padding:18px 20px;
-  font-family:Saira,sans-serif;
-  font-weight:900;
-  text-transform:uppercase;
-}
-details p{margin:0;padding:0 20px 20px;color:var(--muted)}
-.final{
-  min-height:520px;
-  display:grid;
-  align-items:center;
-  text-align:center;
-  background:
-    linear-gradient(180deg,rgba(8,11,16,.72),#080b10),
-    url("assets/img/ambiente/plateia-cheia.webp") center/cover no-repeat;
-}
-.final .lead{margin-inline:auto}
-.sticky-cta{
-  position:fixed;
-  left:16px;
-  right:16px;
-  bottom:14px;
-  z-index:30;
-  display:none;
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:13px;
-  background:rgba(8,11,16,.88);
-  backdrop-filter:blur(18px);
-  padding:10px;
-  box-shadow:0 16px 42px rgba(0,0,0,.45);
-}
-.sticky-cta .btn{width:100%;min-height:50px}
-footer{padding:34px 0 96px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
-footer .wrap{display:flex;justify-content:space-between;gap:24px;align-items:center}
-footer img{width:76px}
-.muted{color:var(--muted)}
-@media (max-width:920px){
-  .topbar-meta{display:none}
-  .hero{min-height:auto;padding:48px 0 64px}
-  .hero-grid,.split,.offer-box{grid-template-columns:1fr}
-  .ticket-card{max-width:520px}
-  .hero-proof{grid-template-columns:1fr}
-  .grid-3,.grid-4{grid-template-columns:1fr 1fr}
-  .section-head{display:block}
-  .section-head p{margin-top:14px}
-}
-@media (max-width:620px){
-  .wrap{width:min(100% - 28px,1120px)}
-  .topbar-in{min-height:64px}
-  .topbar .btn{display:none}
-  .hero-media:after{background:linear-gradient(180deg,rgba(8,11,16,.7),#080b10 88%)}
-  .hero-grid{gap:28px}
-  h1{font-size:43px}
-  h2{font-size:34px}
-  .lead{font-size:18px}
-  .hero-actions .btn{width:100%}
-  .ticket-card{padding:20px}
-  section{padding:62px 0}
-  .grid-3,.grid-4{grid-template-columns:1fr}
-  .photo-card img{height:260px}
-  .speaker img{height:230px}
-  .offer-copy,.offer-price{padding:24px}
-  .logo-tile{width:calc(50% - 6px)}
-  .sticky-cta{display:block}
-  footer .wrap{display:grid}
-}
+  :root{color-scheme:dark}
+  body{margin:0;background:#0B0E14;color:#F2F4F7;font-family:Arial,Helvetica,sans-serif}
+  .v2-loading{min-height:100vh;display:grid;place-items:center;text-align:center;padding:32px}
+  .v2-loading strong{display:block;font-size:18px;margin-bottom:8px}
+  .v2-loading span{color:#9AA4B2;font-size:14px}
 </style>
 </head>
 <body>
-<header class="topbar">
-  <div class="wrap topbar-in">
-    <a href="#topo" aria-label="5º EAM"><img class="logo" src="assets/img/brand/logo-5eam.webp" alt="5º EAM"></a>
-    <div class="topbar-meta"><span>10 e 11 de outubro</span><span class="dot"></span><span>Hotel Serra Jundiaí</span><span class="dot"></span><span>R$ 397</span></div>
-    <a class="btn whatsapp js-whatsapp" href="https://wa.me/5511913496405?text=Ol%C3%A1%2C%20quero%20garantir%20minha%20vaga%20no%205%C2%BA%20EAM" data-position="topo">Garantir pelo WhatsApp</a>
+<div class="v2-loading">
+  <div>
+    <strong>Carregando 5º EAM</strong>
+    <span>Preparando a versão direta da página.</span>
   </div>
-</header>
-
-<main id="topo">
-  <section class="hero">
-    <div class="hero-media"><img src="assets/img/hero/plateia-hero.webp" alt="Plateia do Encontro Anual de Mecânicos"></div>
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow">5º EAM · Encontro Anual de Mecânicos</span>
-        <h1>Dois dias para sair do improviso e <span>liderar melhor</span> sua oficina.</h1>
-        <p class="lead">Uma imersão presencial para donos de oficina que querem organizar gestão, equipe, caixa e próximos passos com mais clareza.</p>
-        <div class="hero-actions">
-          <a class="btn whatsapp js-whatsapp" href="https://wa.me/5511913496405?text=Ol%C3%A1%2C%20quero%20garantir%20minha%20vaga%20no%205%C2%BA%20EAM" data-position="hero">Quero garantir minha vaga</a>
-          <a class="btn ghost" href="#programacao">Ver o essencial</a>
-        </div>
-        <div class="hero-proof" aria-label="Informações principais do evento">
-          <div class="proof-item"><b>10 e 11/10</b><span>sábado e domingo de imersão presencial</span></div>
-          <div class="proof-item"><b>Jundiaí/SP</b><span>Hotel Serra Jundiaí</span></div>
-          <div class="proof-item"><b>R$ 397</b><span>lote atual, vagas limitadas</span></div>
-        </div>
-      </div>
-      <aside class="ticket-card" aria-label="Resumo da inscrição">
-        <img src="assets/img/brand/logo-5eam.webp" alt="5º EAM">
-        <span class="ticket-label">Ingresso 5º EAM</span>
-        <div class="price"><sup>R$</sup>397</div>
-        <p>Fale com a equipe no WhatsApp para confirmar sua vaga e receber as orientações de pagamento.</p>
-        <ul class="ticket-list">
-          <li>2 dias de imersão presencial</li>
-          <li>Palestras, cases, networking e hot seat</li>
-          <li>Para donos, sócios e gestores de oficina</li>
-        </ul>
-        <a class="btn whatsapp js-whatsapp" href="https://wa.me/5511913496405?text=Ol%C3%A1%2C%20quero%20garantir%20minha%20vaga%20no%205%C2%BA%20EAM" data-position="card-oferta">Falar com a equipe</a>
-      </aside>
-    </div>
-  </section>
-
-  <section id="programacao">
-    <div class="wrap split">
-      <div class="copy">
-        <span class="eyebrow">O problema que a imersão resolve</span>
-        <h2>Sua oficina pode até estar cheia, mas ainda depender demais de você.</h2>
-        <p>O 5º EAM é para o dono que sente que virou o principal resolvedor de tudo: cliente, equipe, orçamento, caixa, fornecedor e decisão. A imersão existe para você voltar com mais direção e menos improviso.</p>
-        <div class="bullets">
-          <div class="bullet"><i>1</i><div><b>Gestão e caixa</b><span>Enxergar a oficina como empresa e decidir o que precisa ser organizado primeiro.</span></div></div>
-          <div class="bullet"><i>2</i><div><b>Equipe e liderança</b><span>Parar de carregar tudo sozinho e conduzir pessoas com rotina, clareza e responsabilidade.</span></div></div>
-          <div class="bullet"><i>3</i><div><b>Mercado e futuro</b><span>Entender tecnologia, IA, diagnóstico, híbridos e os movimentos que já mudam a reparação.</span></div></div>
-        </div>
-      </div>
-      <figure class="photo-card">
-        <img src="assets/img/pessoas/sergio-palco.webp" alt="Sergio Santos no palco do EAM">
-        <figcaption>Sergio Santos conduz a imersão com especialistas convidados e cases reais de oficina.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="strip">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">Para quem é</span>
-          <h2>Feito para quem decide na oficina.</h2>
-        </div>
-        <p>O conteúdo é direto para quem precisa sair do dia a dia operacional e assumir decisões mais estratégicas.</p>
-      </div>
-      <div class="grid-3">
-        <article class="mini-card"><b>Dono de oficina</b><span>Para quem sente que a operação ainda depende demais da própria presença.</span></article>
-        <article class="mini-card"><b>Sócio ou sucessor</b><span>Para alinhar direção, números, pessoas e próximos passos com quem decide junto.</span></article>
-        <article class="mini-card"><b>Gestor ou financeiro</b><span>Para quem participa da rotina e precisa transformar direção em execução.</span></article>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">Curadoria</span>
-          <h2>Conteúdo para voltar com decisão.</h2>
-        </div>
-        <p>Uma programação enxuta no palco, mas profunda no que importa: gestão, liderança, mercado, técnica e crescimento.</p>
-      </div>
-      <div class="grid-4">
-        <article class="speaker"><img src="assets/img/pessoas/sergio-palco.webp" alt="Sergio Santos"><div class="in"><b>Sergio Santos</b><span>Abertura, condução estratégica e fechamento</span></div></article>
-        <article class="speaker"><img src="assets/img/palestrantes/rogerio-silva.jpg" alt="Rogério Silva"><div class="in"><b>Rogério Silva</b><span>Escala, margem, liderança e visão de negócio</span></div></article>
-        <article class="speaker"><img src="assets/img/palestrantes/jp-scopino.webp" alt="JP Scopino"><div class="in"><b>JP Scopino</b><span>Híbridos e a nova realidade técnica da oficina</span></div></article>
-        <article class="speaker"><img src="assets/img/palestrantes/alex-tadeu.webp" alt="Alex Tadeu"><div class="in"><b>Alex Tadeu</b><span>Diagnóstico, técnica e novas oportunidades</span></div></article>
-      </div>
-      <div class="grid-3" style="margin-top:16px">
-        <article class="mini-card"><b>Mais especialistas</b><span>Oficina Brasil, Lucas Falasqui, Sandra Nalli, Francisco Almeida, Érica Moura, Laricânica, Impulsione Oficinas, Thaynara e painel de cases.</span></article>
-        <article class="mini-card"><b>Experiência presencial</b><span>Conteúdo, troca de bastidor, networking, perguntas reais e conversas fora do palco.</span></article>
-        <article class="mini-card"><b>Ambiente certo</b><span>Donos de oficina que decidiram parar de crescer só na força do trabalho.</span></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="strip">
-    <div class="wrap split">
-      <div>
-        <span class="eyebrow">Local</span>
-        <h2>Hotel Serra Jundiaí</h2>
-        <p class="lead">Dois dias longe da oficina, em um ambiente preparado para pensar no negócio sem interrupção.</p>
-        <div class="bullets">
-          <div class="bullet"><i>01</i><div><b>Endereço</b><span>Av. Comendador Gumercindo Barranqueiros, 80 · Jundiaí/SP</span></div></div>
-          <div class="bullet"><i>02</i><div><b>O ingresso inclui</b><span>Acesso aos dois dias, palestras, experiências do evento e networking.</span></div></div>
-          <div class="bullet"><i>03</i><div><b>Hospedagem</b><span>Não inclusa. Você pode ficar no próprio hotel ou em opções próximas.</span></div></div>
-        </div>
-      </div>
-      <figure class="photo-card">
-        <img src="assets/img/local/auditorio.webp" alt="Auditório do Hotel Serra Jundiaí">
-        <figcaption>Auditório e estrutura do hotel onde acontece o 5º EAM.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">Marcas confirmadas</span>
-          <h2>O setor também chega junto.</h2>
-        </div>
-        <p>Sabó é patrocinadora master, Sampel é patrocinadora bronze e Sindirepa-SP entra como apoio institucional.</p>
-      </div>
-      <div class="logos" aria-label="Patrocinadores e apoiadores confirmados">
-        <div class="logo-tile"><img src="assets/img/patrocinadores/sabo-master.svg" alt="Sabó"></div>
-        <div class="logo-tile"><img src="assets/img/patrocinadores/sampel.png" alt="Sampel"></div>
-        <div class="logo-tile"><img src="assets/img/patrocinadores/sindirepa.svg" alt="Sindirepa-SP"></div>
-        <div class="logo-tile"><img src="assets/img/patrocinadores/mte-thomson.webp" alt="MTE-Thomson"></div>
-        <div class="logo-tile"><img src="assets/img/patrocinadores/ultracar.webp" alt="Ultracar"></div>
-        <div class="logo-tile"><img src="assets/img/patrocinadores/escola-do-mecanico.webp" alt="Escola do Mecânico"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="offer" id="vaga">
-    <div class="wrap offer-box">
-      <div class="offer-copy">
-        <span class="eyebrow">Inscrição</span>
-        <h2>Garanta sua vaga pelo WhatsApp.</h2>
-        <ul>
-          <li>Investimento atual: R$ 397</li>
-          <li>10 e 11 de outubro de 2026</li>
-          <li>Hotel Serra Jundiaí · Jundiaí/SP</li>
-          <li>Vagas limitadas e sem venda na porta</li>
-        </ul>
-      </div>
-      <div class="offer-price">
-        <span class="ticket-label">Lote atual</span>
-        <div class="price"><sup>R$</sup>397</div>
-        <p class="muted">Clique, fale com a equipe e receba o passo a passo para concluir sua inscrição.</p>
-        <a class="btn whatsapp js-whatsapp" href="https://wa.me/5511913496405?text=Ol%C3%A1%2C%20quero%20garantir%20minha%20vaga%20no%205%C2%BA%20EAM" data-position="oferta">Quero garantir minha vaga</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">Dúvidas rápidas</span>
-          <h2>Antes de chamar no WhatsApp.</h2>
-        </div>
-      </div>
-      <div class="faq">
-        <details><summary>O evento é só palestra?</summary><p>Não. É uma imersão presencial com conteúdo, cases, networking, troca com outros donos de oficina e experiências conduzidas pela equipe do Método SR.</p></details>
-        <details><summary>Posso levar alguém da equipe?</summary><p>Sim. Chame a equipe no WhatsApp para consultar condições para sócio, sucessor, financeiro ou pessoas-chave da oficina.</p></details>
-        <details><summary>O ingresso inclui hospedagem?</summary><p>Não. A hospedagem é à parte. O evento acontece no Hotel Serra Jundiaí e a equipe pode orientar opções próximas.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <section class="final">
-    <div class="wrap">
-      <span class="eyebrow">Decisão</span>
-      <h2>O próximo nível da oficina começa quando o dono decide liderar.</h2>
-      <p class="lead">Se você sente que está na hora de parar de apagar incêndio e começar a conduzir o crescimento com mais clareza, o 5º EAM é o ambiente certo.</p>
-      <div class="hero-actions" style="justify-content:center">
-        <a class="btn whatsapp js-whatsapp" href="https://wa.me/5511913496405?text=Ol%C3%A1%2C%20quero%20garantir%20minha%20vaga%20no%205%C2%BA%20EAM" data-position="fechamento">Garantir pelo WhatsApp</a>
-      </div>
-    </div>
-  </section>
-</main>
-
-<div class="sticky-cta">
-  <a class="btn whatsapp js-whatsapp" href="https://wa.me/5511913496405?text=Ol%C3%A1%2C%20quero%20garantir%20minha%20vaga%20no%205%C2%BA%20EAM" data-position="sticky-mobile">Garantir pelo WhatsApp</a>
 </div>
-
-<footer>
-  <div class="wrap">
-    <img src="assets/img/brand/logo-5eam.webp" alt="5º EAM">
-    <div>5º EAM · Encontro Anual de Mecânicos<br>10 e 11 de outubro de 2026 · Hotel Serra Jundiaí</div>
-    <div><a href="https://wa.me/5511913496405" class="js-whatsapp" data-position="footer">(11) 91349-6405</a><br><a href="mailto:suporte@srmotors.com.br">suporte@srmotors.com.br</a></div>
-  </div>
-</footer>
-
 <script>
 (function(){
-  var baseMessage = 'Olá, quero garantir minha vaga no 5º EAM.';
-  var phoneUrl = 'https://wa.me/5511913496405';
-  var params = new URLSearchParams(window.location.search);
-  var utms = [];
-  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(key){
-    var value = params.get(key);
-    if(value) utms.push(key + '=' + value);
-  });
-  function buildUrl(position){
-    var msg = baseMessage + ' Vim pela página V2';
-    if(position) msg += ' (' + position + ')';
-    if(utms.length) msg += '. Origem: ' + utms.join(' | ');
-    return phoneUrl + '?text=' + encodeURIComponent(msg);
-  }
-  function fireContact(position){
-    if(typeof window.fbq === 'function'){
-      window.fbq('track','Contact',{content_name:'5EAM V2 WhatsApp',cta_position:position || 'unknown'});
-      window.fbq('trackCustom','WhatsAppClick',{page:'v2',cta_position:position || 'unknown'});
-    }
-  }
-  document.querySelectorAll('.js-whatsapp').forEach(function(link){
-    var position = link.getAttribute('data-position') || 'cta';
-    link.href = buildUrl(position);
-    link.addEventListener('click',function(event){
-      if(event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) {
-        fireContact(position);
-        return;
-      }
-      event.preventDefault();
-      fireContact(position);
-      setTimeout(function(){ window.location.href = link.href; }, 280);
+  'use strict';
+
+  var SOURCE_URL = '/index.html?v=20260928-v2-source';
+
+  var V2_CSS = [
+    'body.pagina-v2 #retorno,',
+    'body.pagina-v2 #bastidores,',
+    'body.pagina-v2 .secao-ambiente-v2,',
+    'body.pagina-v2 #historia,',
+    'body.pagina-v2 #paraquem,',
+    'body.pagina-v2 .secao-equipe-v2,',
+    'body.pagina-v2 .secao-condicoes-v2{display:none!important}',
+    'body.pagina-v2 .hero .rolar{display:none!important}'
+  ].join('\n');
+
+  function v2Runtime(){
+    var phoneUrl = 'https://wa.me/5511913496405';
+    var baseMessage = 'Olá, quero garantir minha vaga no 5º EAM.';
+    var params = new URLSearchParams(window.location.search);
+    var utms = [];
+
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(key){
+      var value = params.get(key);
+      if (value) utms.push(key + '=' + value);
     });
-  });
+
+    function buildWhatsApp(position){
+      var msg = baseMessage + ' Vim pela página V2 enxuta.';
+      if (position) msg += ' CTA: ' + position + '.';
+      if (utms.length) msg += ' Origem: ' + utms.join(' | ');
+      return phoneUrl + '?text=' + encodeURIComponent(msg);
+    }
+
+    function fireContact(position){
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'Contact', {
+          content_name: '5EAM V2 Enxuta WhatsApp',
+          cta_position: position || 'cta'
+        });
+        window.fbq('trackCustom', 'WhatsAppClick', {
+          page: 'v2-enxuta',
+          cta_position: position || 'cta'
+        });
+      }
+    }
+
+    function labelFrom(el){
+      return (el.textContent || el.getAttribute('aria-label') || 'cta').trim().slice(0, 80);
+    }
+
+    function normalizeCtaText(el){
+      el.textContent = 'Garantir minha vaga';
+    }
+
+    function linkFromButton(button){
+      var a = document.createElement('a');
+      Array.prototype.slice.call(button.attributes).forEach(function(attr){
+        if (attr.name === 'type' || attr.name === 'data-ir-preco' || attr.name === 'data-abrir-form') return;
+        a.setAttribute(attr.name, attr.value);
+      });
+      a.className = button.className;
+      a.innerHTML = button.innerHTML;
+      a.setAttribute('data-v2-zap', '');
+      a.setAttribute('href', buildWhatsApp(labelFrom(button)));
+      button.parentNode.replaceChild(a, button);
+      return a;
+    }
+
+    function prepareWhatsAppCtas(){
+      document.querySelectorAll('[data-ir-preco], [data-abrir-form]').forEach(function(cta){
+        normalizeCtaText(cta);
+        cta.removeAttribute('data-ir-preco');
+        cta.removeAttribute('data-abrir-form');
+        cta.setAttribute('data-v2-zap', '');
+        if (cta.tagName && cta.tagName.toLowerCase() === 'a') {
+          cta.setAttribute('href', buildWhatsApp(labelFrom(cta)));
+        } else if (cta.parentNode) {
+          linkFromButton(cta);
+        }
+      });
+
+      document.querySelectorAll('[data-v2-zap]').forEach(function(cta){
+        cta.setAttribute('href', buildWhatsApp(labelFrom(cta)));
+      });
+    }
+
+    document.addEventListener('click', function(event){
+      var cta = event.target.closest('[data-v2-zap]');
+      if (!cta) return;
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      var position = labelFrom(cta);
+      var url = cta.getAttribute('href') || buildWhatsApp(position);
+      fireContact(position);
+      setTimeout(function(){ window.location.assign(url); }, 260);
+    }, true);
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', prepareWhatsAppCtas);
+    } else {
+      prepareWhatsAppCtas();
+    }
+    setTimeout(prepareWhatsAppCtas, 400);
+  }
+
+  function injectClass(attrs){
+    if (/class\s*=/.test(attrs)) {
+      return attrs.replace(/class=(["'])(.*?)\1/i, function(_, quote, value){
+        return 'class=' + quote + value + ' pagina-v2' + quote;
+      });
+    }
+    return attrs + ' class="pagina-v2"';
+  }
+
+  function enhance(html){
+    html = html.replace(/<title>[\s\S]*?<\/title>/i, '<title>5º EAM · Página direta | Encontro Anual de Mecânicos</title>');
+    html = html.replace(/<meta name="description"[^>]*>/i, '<meta name="description" content="Versão direta da página do 5º EAM: dois dias de imersão presencial para donos de oficina. 10 e 11 de outubro de 2026, Hotel Serra Jundiaí. Lote atual R$ 397.">');
+    html = html.replace(/<link rel="canonical"[^>]*>/i, '<link rel="canonical" href="https://5eam-pv.vercel.app/v2">');
+    html = html.replace(/<body\b([^>]*)>/i, function(match, attrs){
+      return '<body' + injectClass(attrs || '') + '>';
+    });
+    html = html.replace('<!-- ================= BLOCO 8 · AMBIENTE ================= -->\n<section class="virada esq">', '<!-- ================= BLOCO 8 · AMBIENTE ================= -->\n<section class="virada esq secao-ambiente-v2">');
+    html = html.replace('<!-- ================= BLOCO 12 · EXPANSÃO DE TICKET ================= -->\n<section class="grid-bg">', '<!-- ================= BLOCO 12 · EXPANSÃO DE TICKET ================= -->\n<section class="grid-bg secao-equipe-v2">');
+    html = html.replace('<!-- ================= BLOCO 13 · CONDIÇÕES ================= -->\n<section>', '<!-- ================= BLOCO 13 · CONDIÇÕES ================= -->\n<section class="secao-condicoes-v2">');
+    html = html.replace(/<\/head>/i, '<style>' + V2_CSS + '</style></head>');
+    return html;
+  }
+
+  fetch(SOURCE_URL, { cache: 'no-store' })
+    .then(function(response){
+      if (!response.ok) throw new Error('Nao foi possivel carregar a pagina principal.');
+      return response.text();
+    })
+    .then(function(html){
+      document.open();
+      document.write(enhance(html));
+      document.close();
+      v2Runtime();
+    })
+    .catch(function(error){
+      document.body.innerHTML = '<div class="v2-loading"><div><strong>Não foi possível carregar a página.</strong><span>' + error.message + '</span></div></div>';
+    });
 })();
 </script>
 </body>
