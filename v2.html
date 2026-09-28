@@ -41,20 +41,10 @@
 
   function v2Runtime(){
     var phoneUrl = 'https://wa.me/5511913496405';
-    var baseMessage = 'Olá, quero garantir minha vaga no 5º EAM.';
-    var params = new URLSearchParams(window.location.search);
-    var utms = [];
-
-    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(key){
-      var value = params.get(key);
-      if (value) utms.push(key + '=' + value);
-    });
+    var baseMessage = 'Olá, quero garantir minha vaga no 5º EAM. Vim pelo anúncio';
 
     function buildWhatsApp(position){
-      var msg = baseMessage + ' Vim pela página V2 enxuta.';
-      if (position) msg += ' CTA: ' + position + '.';
-      if (utms.length) msg += ' Origem: ' + utms.join(' | ');
-      return phoneUrl + '?text=' + encodeURIComponent(msg);
+      return phoneUrl + '?text=' + encodeURIComponent(baseMessage);
     }
 
     function fireContact(position){
